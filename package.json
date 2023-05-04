@@ -4,7 +4,8 @@
   "description": "Proyecto para aprender las bases de Typescript",
   "main": "index.js",
   "scripts": {
-    "start:exercise-1": "tsc-watch --OnSuccess \"node dist/basics/exercise-1/app.js\""
+    "start:exercise-1": "tsc-watch --OnSuccess \"node dist/basics/exercise-1/app.js\"",
+    "start:exercise-2": "tsc-watch --OnSuccess \"node dist/basics/exercise-2/poo-basic.js\""
   },
   "keywords": [],
   "author": "",
