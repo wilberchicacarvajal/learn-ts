@@ -37,7 +37,7 @@ console.log(ferrari);
 let lambo = new Auto('Lamborghini');
 console.log(lambo);
 lambo.puertas = 2;
-lambo.color = 'Exotico'
+lambo.color = 'Exótico'
 console.log(lambo);
 
 class Auto2 { 
@@ -62,8 +62,6 @@ class Auto2 {
     private encender() {
         console.log(`Bienvenido ${this.marca}, tu color es: ${this.color}, tu peso es: ${this.peso} y tienes ${this.puertas} puertas.`);
     }
-
-
 }
 
 let ford = new Auto2(500, 'ford');
