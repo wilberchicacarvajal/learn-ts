@@ -32,6 +32,23 @@ interface IContrato {
     suspender(cantidad: number): void;
 }
 
+interface IClausula {
+    cumplirObjetivo(): boolean;
+}
+
+// Entre interfaces solo se puede hacer herencia
+interface IClausulaJunior extends IClausula {
+    levantarManoATiempo(): boolean;
+}
+
+interface IClausulaMedium extends IClausula {
+    apoyarProyectosCriticos(): boolean;
+}
+
+interface IClausulaSenior extends IClausula {
+    apoyarFormacion(): boolean;
+}
+
 class contratoUltraCredit implements IContrato {
 
     // Atributos que debo tener en la interface ContratoJunior
@@ -62,13 +79,26 @@ class contratoUltraCredit implements IContrato {
 
 }
 
-class ContratoGlobal implements IContrato {
+// Multiples implementaciones
+class ContratoGlobal implements IContrato, IClausulaJunior, IClausulaMedium, IClausulaSenior {
     salario?: number;
     fechaInicio?: Date;
     rol: Rol;
 
     constructor() {
         this.rol = Rol.Middle;
+    }
+    apoyarFormacion(): boolean {
+        throw new Error("Method not implemented.");
+    }
+    apoyarProyectosCriticos(): boolean {
+        throw new Error("Method not implemented.");
+    }
+    levantarManoATiempo(): boolean {
+        throw new Error("Method not implemented.");
+    }
+    cumplirObjetivo(): boolean {
+        throw new Error("Method not implemented.");
     }
     suspender(cantidad: number): void {
         console.log(`Estas suspendido por: ${cantidad} meses`);
