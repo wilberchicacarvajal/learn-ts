@@ -16,6 +16,6 @@ public mostrarInformacion(): void {
     console.log (` Nombre: ${this.nombre}, ID: ${this.id} `);
     }
 
-    //
+    // Firma de un método - Quien use la clase base debe implementar
     public abstract calcularSalario(): number;
 }
